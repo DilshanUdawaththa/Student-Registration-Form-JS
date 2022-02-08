@@ -41,32 +41,35 @@ function resetTextBoxes() {
 function filterFromAge() {
     let str = '';
 
-    for (i=0; i<array.length; i++) {
-        let j = array[i][0];
-        if (j.age >= document.getElementById('filterAge').value) {
-            str += `Id : ${j.id}<br> Email : ${j.email}<br> Name : ${j.name}<br> Mobile : ${j.mobile}<br> Age : ${j.age}<br> Fee : ${j.fee}<br><br>`;  // adding each element to variable
+    let count = 0;
+
+        for (i=0; i<array.length; i++) {
+            let j = array[i][0];
+            if (j.age >= document.getElementById('filterAge').value) {
+                str += `Id : ${j.id}<br> Email : ${j.email}<br> Name : ${j.name}<br> Mobile : ${j.mobile}<br> Age : ${j.age}<br> Fee : ${j.fee}<br><br>`;  // adding each element to variable
+                count++;
+            }
         }
-        else {
+        if(count == 0)
             str += `You entered ${document.getElementById('filterAge').value} and there are no students greater than or equal to this age `;
-        }
-    }
-    
+
     document.getElementById('show1').innerHTML= str;
 }
 
 function findFromId() {
     let str = '';
 
-    for (i=0; i<array.length; i++) {
-        let j = array[i][0];
-        if (j.id === document.getElementById('findId').value) {
-            str += `Id : ${j.id}<br> Email : ${j.email}<br> Name : ${j.name}<br> Mobile : ${j.mobile}<br> Age : ${j.age}<br> Fee : ${j.fee}<br><br>`;  // adding each element to variable
+    find: {
+        for (i=0; i<array.length; i++) {
+            let j = array[i][0];
+            if (j.id === document.getElementById('findId').value) {
+                str += `Id : ${j.id}<br> Email : ${j.email}<br> Name : ${j.name}<br> Mobile : ${j.mobile}<br> Age : ${j.age}<br> Fee : ${j.fee}<br><br>`;  // adding each element to variable
+                break find;
+            }
         }
-        else {
-            str += `You entered ${document.getElementById('findId').value} and there is no student equal to this ID`;
-        }
+        str += `You entered ${document.getElementById('findId').value} and there is no student equal to this ID`;
     }
-    
+
     document.getElementById('show2').innerHTML= str;
 }
 
