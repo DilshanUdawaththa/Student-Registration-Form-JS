@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="student-box">
+      <div class="student-form part1">
+        <h3>Filter Students from Age</h3>
+        <form class="" action="index.html" method="post">
+          <label for="lname">Enter Age :</label><br />
+          <input
+            type="text"
+            id="filterAge"
+            name="filterAge"
+            value=""
+            class="formItems"
+            required
+          /><br />
+          <button type="button" name="button" onclick="filterFromAge()">
+            Display Student
+          </button>
+        </form>
+        <br />
+
+        <p id="show1"></p>
+      </div>
+
+      <div class="student-form part2">
+        <h3>Student Registration</h3>
+        <form class="" action="index.html" method="post">
+          <label for="fname">Id :</label><br />
+          <input
+            type="text"
+            id="id"
+            name="id"
+            value=""
+            class="formItems"
+            required
+          /><br />
+          <label for="lname">Email :</label><br />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            value=""
+            class="formItems"
+            required
+          /><br />
+          <label for="fname">Name :</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value=""
+            class="formItems"
+            required
+          /><br />
+          <label for="lname">Mobile :</label><br />
+          <input
+            type="text"
+            id="mobile"
+            name="mobile"
+            value=""
+            class="formItems"
+            required
+          /><br />
+          <label for="fname">Age :</label><br />
+          <input
+            type="text"
+            id="age"
+            name="age"
+            value=""
+            class="formItems"
+            required
+          /><br />
+          <label for="lname">Fee :</label><br />
+          <input
+            type="text"
+            id="fee"
+            name="fee"
+            value=""
+            class="formItems"
+            required
+          /><br />
+          <button type="button" name="button" onclick="addStudent()">
+            Add Student
+          </button>
+          <button type="button" name="button" onclick="displayDetails()">
+            Display Student
+          </button>
+        </form>
+        <br />
+
+        <p id="show"></p>
+      </div>
+
+      <div class="student-form part3">
+        <h3>Find Student from ID</h3>
+        <form class="" action="index.html" method="post">
+          <label for="lname">Enter ID :</label><br />
+          <input
+            type="text"
+            id="findId"
+            name="findId"
+            value=""
+            class="formItems"
+            required
+          /><br />
+          <button type="button" name="button" onclick="findFromId()">
+            Display Student
+          </button>
+        </form>
+        <br />
+
+        <p id="show2"></p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
