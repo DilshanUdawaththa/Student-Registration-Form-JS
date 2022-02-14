@@ -63,17 +63,6 @@ input:invalid:required {
   background-image: linear-gradient(to right, pink, lightgreen);
 }
 
-@media screen and (max-width: 700px) {
-  .student-box {
-    flex-direction: column;
-  }
-  div .part2 {
-    order: 1;
-  }
-  div .part1 {
-    order: 2;
-  }
-  div .part3 {
-    order: 3;
-  }
+@media screen and (mam-width: 700px) {
+	flex-direction: column;
 }
